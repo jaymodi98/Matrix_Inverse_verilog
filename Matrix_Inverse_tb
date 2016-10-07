@@ -1,0 +1,28 @@
+`timescale 1ns / 1ps
+
+/*
+Author: Jay D. Modi
+Roll No: 201501059
+Description: Test bench for matrix inversion
+*/
+
+module inverse_tb;
+
+	// Inputs
+	reg clk;
+
+	// Instantiate the Unit Under Test (UUT)
+	Matrix_Inverse_Verilog uut (
+		.clk(clk)
+	);
+	always #50 clk = ~clk;
+	
+	initial begin
+		// Initialize Inputs
+		clk = 0;
+
+
+	end
+      
+endmodule
+
